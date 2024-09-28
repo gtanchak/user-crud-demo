@@ -1,6 +1,6 @@
 import { useRoutes } from 'react-router-dom'
 import HomePage from '../pages/index.jsx'
-import UserPage from '../pages/user.jsx'
+import UserPage from '../pages/user/user.jsx'
 
 export const Routes = () => {
     const element = useRoutes([
