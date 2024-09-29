@@ -1,7 +1,7 @@
 import UsersTable from './components/UserTable.jsx'
 import { IconArrowLeft } from '@tabler/icons-react'
 import { useNavigate } from 'react-router-dom'
-import UserForm from './components/UserForm.jsx'
+import UserForm from './components/UserForm/UserForm.jsx'
 
 import { useUser } from './useUser.js'
 

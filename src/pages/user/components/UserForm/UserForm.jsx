@@ -1,41 +1,12 @@
-import { useState, useEffect } from 'react'
-
-const defaultUser = {
-    id: null,
-    name: '',
-    email: '',
-    role: 'User',
-    status: 'Active',
-}
+import { useUserForm } from './useUserForm.js'
 
 // eslint-disable-next-line react/prop-types
 const UserForm = ({ isOpen, onClose, onSubmit, userToEdit }) => {
-    const [formData, setFormData] = useState(defaultUser)
-
-    // Update form data when userToEdit changes
-    useEffect(() => {
-        if (userToEdit) {
-            setFormData(userToEdit) // Populate form with userToEdit data
-        } else {
-            setFormData(defaultUser) // Reset form when userToEdit is null
-        }
-    }, [userToEdit])
-
-    // Handle input change
-    const handleChange = (e) => {
-        const { name, value } = e.target
-        setFormData((prev) => ({
-            ...prev,
-            [name]: value,
-        }))
-    }
-
-    // Handle form submission
-    const handleSubmit = (e) => {
-        e.preventDefault()
-        onSubmit(formData)
-        onClose() // Close modal after submission
-    }
+    const { formData, handleSubmit, handleChange } = useUserForm({
+        onSubmit,
+        userToEdit,
+        onClose,
+    })
 
     if (!isOpen) return null
 
