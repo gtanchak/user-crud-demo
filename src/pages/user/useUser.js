@@ -73,5 +73,6 @@ export const useUser = () => {
         isLoading,
         isModalOpen,
         setIsModalOpen,
+        users,
     }
 }

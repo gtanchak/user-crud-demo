@@ -15,6 +15,7 @@ const UserPage = () => {
         handleFormSubmit,
         editUser,
         setIsModalOpen,
+        users,
     } = useUser()
 
     const navigate = useNavigate()

@@ -15,7 +15,7 @@ const HomePage = () => {
                         User Crud Operation
                     </h1>
                     <p className="mb-10 italic text-gray-500">
-                        To view User&#39;s click on Get Started button
+                        To view User&#39;s click on Get Started Button
                     </p>
                     <button
                         className="bg-emerald-500 rounded px-4 py-2 text-primary"
