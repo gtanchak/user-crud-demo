@@ -14,9 +14,9 @@ export const useUserForm = ({ userToEdit, onSubmit, onClose }) => {
     // Update form data when userToEdit changes
     useEffect(() => {
         if (userToEdit) {
-            setFormData(userToEdit) // Populate form with userToEdit data
+            setFormData(userToEdit)
         } else {
-            setFormData(defaultUser) // Reset form when userToEdit is null
+            setFormData(defaultUser)
         }
     }, [userToEdit])
 
@@ -33,7 +33,7 @@ export const useUserForm = ({ userToEdit, onSubmit, onClose }) => {
     const handleSubmit = (e) => {
         e.preventDefault()
         onSubmit(formData)
-        onClose() // Close modal after submission
+        onClose()
     }
 
     return { handleSubmit, formData, handleChange }
