@@ -96,7 +96,7 @@ const UserForm = ({ isOpen, onClose, onSubmit, userToEdit }) => {
                         </button>
                         <button
                             type="submit"
-                            className="px-4 py-2 bg-blue-600 text-white rounded-md shadow-sm hover:bg-blue-700"
+                            className="px-4 py-2 bg-emerald-500 hover:bg-emerald-600 text-white rounded-md shadow-sm"
                         >
                             {formData.id ? 'Update User' : 'Add User'}
                         </button>

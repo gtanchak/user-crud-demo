@@ -35,7 +35,7 @@ const UserPage = () => {
                 </div>
                 <button
                     onClick={handleAddUser}
-                    className=" bg-emerald-500 rounded px-4 py-2 text-primary"
+                    className="bg-emerald-500 hover:bg-emerald-600 rounded px-4 py-2 text-white"
                 >
                     Add New User
                 </button>
