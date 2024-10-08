@@ -1,14 +1,14 @@
 import axios from 'axios'
 
 export const getUsers = async () => {
-    const { data } = await axios.get('http://localhost:3000/api/users') // Replace with your API URL
+    const { data } = await axios.get(`${import.meta.env.VITE_BASE_URL}/users`) // Replace with your API URL
     return data
 }
 
 // DELETE: Delete user by ID
 export const deleteUser = async (userId) => {
     const { data } = await axios.delete(
-        `http://localhost:3000/api/users/${userId}`
+        `${import.meta.env.VITE_BASE_URL}/users/${userId}`
     )
     return data
 }
@@ -16,7 +16,7 @@ export const deleteUser = async (userId) => {
 // PUT: Update existing user
 export const updateUser = async (user) => {
     const { data } = await axios.put(
-        `http://localhost:3000/api/users/${user._id}`,
+        `${import.meta.env.VITE_BASE_URL}/users/${user._id}`,
         user
     )
     return data
@@ -24,6 +24,9 @@ export const updateUser = async (user) => {
 
 // POST: Create new user
 export const createUser = async (user) => {
-    const { data } = await axios.post('http://localhost:3000/api/users', user)
+    const { data } = await axios.post(
+        `${import.meta.env.VITE_BASE_URL}/users`,
+        user
+    )
     return data
 }
